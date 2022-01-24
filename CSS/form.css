@@ -87,7 +87,7 @@ body {
 
 label {
   padding: 12px 12px 12px 0;
-  display: inline-block;
+  display: inline-flexbox;
 }
 
 .text {
@@ -105,20 +105,20 @@ label {
   resize: vertical;
 }
 
-.profile-radio-content{
-    display: flex;
-    flex-direction: row;
+.profile-radio-content {
+  display: flex;
+  flex-direction: row;
 }
 
-.profile-radio-content > label{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 13px;
+.profile-radio-content > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 13px;
 }
 
-.profile{
-    width: 40px;
-    border-radius: 50%;
-    margin-left: 12px;
+.profile {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 12px;
 }
