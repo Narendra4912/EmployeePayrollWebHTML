@@ -43,7 +43,7 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
-      
+    let 
     this._startDate = startDate;
   }
 

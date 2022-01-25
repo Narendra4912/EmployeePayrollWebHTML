@@ -7,6 +7,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../CSS/form.css" />
+    <script src="../JS/FormValidation.js"></script>
+    <script src="../JS/EmployeePayrollData.js"></script>
   </head>
   <body>
     <header class="header-content header">
@@ -159,8 +161,8 @@
 
         <div class="row-content">
           <label class="label text" for="salary">Salary</label>
-          <input type="range" class="input" id="salary" name="salary" min="300000" max="500000" value="400000" step="100">
-          <output class="salary-output text" for="salary">400000</output>
+          <input type="range" class="input" id="salary" name="salary" min="300000" max="500000" value="400000" step="100" oninput="salaryValue()">
+          <output class="salary-output text" for="salary" >400000</output>
         </div>
 
         <div class="row-content">
