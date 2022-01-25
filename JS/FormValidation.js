@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-function salaryValue (){
-    const salary=document.querySelector('#salary');
-    const salaryOutput=document.querySelector('.salary-output');
-    salary.addEventListener('input', function(){
-        salaryOutput.textContent=salary.value;
-    })
-}
-
-=======
 window.addEventListener('DOMContentLoaded',(event) =>{
     
-    validateName();
+    //validateName();
 
     salaryValue();
 
@@ -54,4 +44,60 @@ function salaryValue() {
       salaryOutput.textContent = salary.value;
     });
   }
->>>>>>> Day44-UC2-EmployeeNameAndDateValidations
+
+
+const save = () =>{
+    try{
+        console.log("in save");
+        let EmployeePayrollData=createEmployeeData();
+    }
+    catch(e)
+    {
+        return;
+    }
+}
+
+const createEmployeeData = () =>{
+    let employeePayrollData=new EmployeePayrollData();
+    try{
+        console.log("in create");
+        employeePayrollData.name=getInputValueByID('#name');
+    }
+    catch(e)
+    {
+        setTextValue('.text-error', e);
+        throw e;
+    }
+    employeePayrollData.profilePic=getSelectedValue('[name=profile]').pop();
+    employeePayrollData.gender=getSelectedValue('[name=gender]').pop();
+    employeePayrollData.department=getSelectedValue('[name=department]');
+    employeePayrollData.salary=getInputValueByID('#salary');
+    let date=document.querySelector('#day')+" "+document.querySelector('#month')+" "+document.querySelector('#year');
+    employeePayrollData.startDate=Date.parse(date);
+    employeePayrollData.notes=getInputValueByID('#notes');
+
+    alert(JSON.stringify(employeePayrollData).toString());
+    return employeePayrollData;
+}
+
+
+const getSelectedValue = (propertyValue) =>{
+    let allItems=document.querySelectorAll(propertyValue);
+    let selItems=[];
+    for(let item of allItems)
+    {
+        if(item.checked)
+            selItems.push(item.value);
+    }
+    return selItems;
+}
+
+const getInputValueByID = (id) =>{
+    let value=document.querySelector(id).value;
+    return value;
+}
+
+const setTextValue = (id, message) =>{
+    const textError=document.querySelector(id);
+    textError.textContent=message;
+}

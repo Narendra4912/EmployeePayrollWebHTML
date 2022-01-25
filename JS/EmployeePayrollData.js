@@ -1,5 +1,4 @@
 class EmployeePayrollData {
-
   set id(id) {
     this._id = id;
   }
@@ -43,17 +42,12 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
-<<<<<<< HEAD
-    let 
-    this._startDate = startDate;
-=======
-    console.log("Date setter "+startDate);
+    console.log("Date setter " + startDate);
     // const currentDate= new Date();
     // let diff=Math.abs(currentDate.getTime-Date.parse(startDate).getTime);
     // console.log(diff);
     // if(diff>(1000/60*60*24))
-        this._startDate = startDate;
->>>>>>> Day44-UC2-EmployeeNameAndDateValidations
+    this._startDate = startDate;
   }
 
   get startDate() {
