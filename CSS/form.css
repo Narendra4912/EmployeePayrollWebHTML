@@ -153,7 +153,9 @@ select {
   color: #42515f;
   opacity: 1;
   background: transparent;
+  border: none;
   border: 1px solid #707070;
+  border-radius: 4px;
   font-weight: 400;
   min-width: 140px;
   padding: 7px 7px;

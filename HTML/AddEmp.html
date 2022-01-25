@@ -115,6 +115,7 @@
               id="hr"
               name="hr"
               value="HR"
+              required
             />
             <label class="label text" for="hr">HR</label>
             <input
@@ -123,6 +124,7 @@
               id="sales"
               name="sales"
               value="Sales"
+              required
             />
             <label class="label text" for="hr">Sales</label>
             <input
@@ -131,6 +133,7 @@
               id="finance"
               name="finance"
               value="Finance"
+              required
             />
             <label class="label text" for="hr">Finance</label>
             <input
@@ -139,6 +142,7 @@
               id="engineer"
               name="engineer"
               value="Engineer"
+              required
             />
             <label class="label text" for="hr">Engineer</label>
             <input
@@ -147,6 +151,7 @@
               id="others"
               name="others"
               value="Others"
+              required
             />
             <label class="label text" for="hr">Others</label>
           </div>
@@ -160,7 +165,7 @@
 
         <div class="row-content">
             <label for="startDate" class="label text">Start Date</label>
-            <select name="Day" id="day">
+            <select name="Day" id="day" required>
                 <option class="default-option" disabled selected>Select Day</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -195,7 +200,7 @@
                 <option value="31">31</option>
             </select>
 
-            <select name="Month" id="month" pla>
+            <select name="Month" id="month" required>
                 <option class="default-option" disabled selected>Select Month</option>
                 <option value="Jan">January</option>
                 <option value="Feb">February</option>
@@ -211,7 +216,7 @@
                 <option value="Dec">December</option>
             </select>
 
-            <select name="Year" id="year">
+            <select name="Year" id="year" required>
                 <option class="default-option" disabled selected>Select Year</option>
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
@@ -228,7 +233,7 @@
 
         <div class="row-content">
             <label for="notes" class="label text">Notes</label>
-            <textarea name="Notes" id="notes" class="input" placeholder="" style="height: 100px;"></textarea>
+            <textarea name="Notes" id="notes" class="input" placeholder="Optional part..." style="height: 100px;"></textarea>
         </div>
 
         <div class="buttonParent">
