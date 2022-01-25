@@ -1,4 +1,5 @@
 class EmployeePayrollData {
+
   set id(id) {
     this._id = id;
   }
@@ -16,10 +17,9 @@ class EmployeePayrollData {
   }
 
   set name(name) {
-    let nameRegex=RegExp('^[A-Z]{1}[A-Za-z0-9]{2}$');
-    if(nameRegex.test(name))
-        this._name = name;
-    throw "Name is incorrect !!!";
+    let nameRegex = RegExp("^[A-Z]{1}[A-Za-z]{2,}$");
+    if (nameRegex.test(name)) this._name = name;
+    else throw "Name is incorrect !!!";
   }
 
   get name() {
@@ -43,8 +43,17 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
+<<<<<<< HEAD
     let 
     this._startDate = startDate;
+=======
+    console.log("Date setter "+startDate);
+    // const currentDate= new Date();
+    // let diff=Math.abs(currentDate.getTime-Date.parse(startDate).getTime);
+    // console.log(diff);
+    // if(diff>(1000/60*60*24))
+        this._startDate = startDate;
+>>>>>>> Day44-UC2-EmployeeNameAndDateValidations
   }
 
   get startDate() {
@@ -66,6 +75,4 @@ class EmployeePayrollData {
   get notes() {
     return this._notes;
   }
-
-
 }

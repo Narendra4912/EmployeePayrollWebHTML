@@ -105,6 +105,13 @@ label {
   resize: vertical;
 }
 
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
 .profile-radio-content {
   display: flex;
   flex-direction: row;
@@ -132,7 +139,7 @@ select {
   letter-spacing: 0px;
   color: #42515f;
   background-color: transparent;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .default-option {
