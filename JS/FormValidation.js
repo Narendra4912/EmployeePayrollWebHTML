@@ -1,7 +1,5 @@
 window.addEventListener('DOMContentLoaded',(event) =>{
     
-    //validateName();
-
     salaryValue();
 
 
@@ -48,7 +46,6 @@ function salaryValue() {
 
 const save = () =>{
     try{
-        console.log("in save");
         let EmployeePayrollData=createEmployeeData();
     }
     catch(e)
@@ -60,7 +57,6 @@ const save = () =>{
 const createEmployeeData = () =>{
     let employeePayrollData=new EmployeePayrollData();
     try{
-        console.log("in create");
         employeePayrollData.name=getInputValueByID('#name');
     }
     catch(e)
@@ -101,3 +97,28 @@ const setTextValue = (id, message) =>{
     const textError=document.querySelector(id);
     textError.textContent=message;
 }
+
+const resetForm = () =>{
+    setValue('#name',"");
+    unsetSelectedValue('[name=profile]');
+    unsetSelectedValue('[name=gender]');
+    unsetSelectedValue('[name=department]');
+    setValue('#salary',"");
+    setValue('#notes',"");
+    setValue('#day',"Day");
+    setValue('#month',"Month");
+    setValue('#year',"Year");
+}
+
+const unsetSelectedValue = (propertyValue) =>{
+    let allItems=document.querySelectorAll(propertyValue);
+    for(let item of allItems){
+        item.checked=false;
+    }
+}
+
+const setValue = (id, value) =>{
+    const element=document.querySelector(id);
+    element.value=value;
+}
+    

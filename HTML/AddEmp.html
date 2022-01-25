@@ -22,7 +22,7 @@
     </header>
 
     <div class="form-content">
-      <form class="form" action="#" onsubmit="save(); return false">
+      <form class="form" action="#" onreset="resetForm()" onsubmit="save(); return false" >
         <div class="form-head">Employee Payroll Form</div>
         <div class="row-content">
           <label for="name" class="label text">Name</label>
@@ -172,7 +172,7 @@
 
         <div class="row-content">
           <label for="startDate" class="label text">Start Date</label>
-          <select name="Day" id="day" required>
+          <select name="day" id="day" required>
             <option class="default-option" disabled selected>Day</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -207,7 +207,7 @@
             <option value="31">31</option>
           </select>
 
-          <select name="Month" id="month" required>
+          <select name="month" id="month" required>
             <option class="default-option" disabled selected>Month</option>
             <option value="Jan">January</option>
             <option value="Feb">February</option>
@@ -223,7 +223,7 @@
             <option value="Dec">December</option>
           </select>
 
-          <select name="Year" id="year" required>
+          <select name="year" id="year" required>
             <option class="default-option" disabled selected>Year</option>
             <option value="2023">2023</option>
             <option value="2022">2022</option>
@@ -255,10 +255,10 @@
             >Cancel</a
           >
           <div class="submit-reset">
-            <button class="submitButton button" id="submitButton">
+            <button type="submit" class="submitButton button" id="submitButton">
               Submit
             </button>
-            <button class="resetButton button" id="resetButton">Reset</button>
+            <button type="reset" class="resetButton button" id="resetButton">Reset</button>
           </div>
         </div>
       </form>
