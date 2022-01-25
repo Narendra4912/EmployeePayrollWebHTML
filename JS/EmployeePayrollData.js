@@ -43,7 +43,7 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
-    console.log("Date setter");
+    console.log("Date setter "+startDate);
     // const currentDate= new Date();
     // let diff=Math.abs(currentDate.getTime-Date.parse(startDate).getTime);
     // console.log(diff);
