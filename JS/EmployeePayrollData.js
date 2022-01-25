@@ -42,10 +42,10 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
-      let date=Date.parse(startDate);
     console.log("Date setter " + date);
-    // const currentDate= new Date();
-    // let diff=Math.abs(currentDate.getTime-Date.parse(startDate).getTime);
+    const currentDate= new Date();
+    let diff=Math.abs(currentDate.getTime-startDate.getTime);
+    console.log(diff);
     // console.log(diff);
     // if(diff>(1000/60*60*24))
     this._startDate = startDate;

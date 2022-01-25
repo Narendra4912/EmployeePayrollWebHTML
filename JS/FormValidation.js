@@ -3,18 +3,18 @@ window.addEventListener('DOMContentLoaded',(event) =>{
     salaryValue();
 
 
-    let date=document.querySelector('#Day')+" "+document.querySelector('#Month')+" "+document.querySelector('#Year');
-    const dateError=document.querySelector('.date-error');
+    // let date=document.querySelector('#Day')+" "+document.querySelector('#Month')+" "+document.querySelector('#Year');
+    // const dateError=document.querySelector('.date-error');
     
-    try
-    {
-        (new EmployeePayrollData()).startDate=Date.parse(date);
-        dateError.textContent="";
-    }
-    catch(e)
-    {
-        dateError.textContent=e;
-    }
+    // try
+    // {
+    //     (new EmployeePayrollData()).startDate=Date.parse(date);
+    //     dateError.textContent="";
+    // }
+    // catch(e)
+    // {
+    //     dateError.textContent=e;
+    // }
     
 
 })
@@ -69,7 +69,16 @@ const createEmployeeData = () =>{
     employeePayrollData.department=getSelectedValue('[name=department]');
     employeePayrollData.salary=getInputValueByID('#salary');
     let date=getInputValueByID('#day')+" "+getInputValueByID('#month')+" "+getInputValueByID('#year');
-    employeePayrollData.startDate=Date.parse(date);
+    try
+    {
+        employeePayrollData.startDate=Date.parse(date);
+        dateError.textContent="";
+    }
+    catch(e)
+    {
+        dateError.textContent=e;
+    }
+    //employeePayrollData.startDate=Date.parse(date);
     employeePayrollData.notes=getInputValueByID('#notes');
 
     alert(JSON.stringify(employeePayrollData).toString());
