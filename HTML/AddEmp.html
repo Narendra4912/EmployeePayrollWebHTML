@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../CSS/form.css" />
     <script src="..//JS/FormValidation.js"></script>
     <script src="../JS/EmployeePayrollData.js"></script>
+    <script src="../JS/SiteProperties.js"></script>
   </head>
   <body>
     <header class="header-content header">
@@ -26,7 +27,7 @@
     </header>
 
     <div class="form-content">
-      <form class="form" action="#" onreset="resetForm()" onsubmit="save(); return false" >
+      <form class="form" action="../HTML/Homepage.html" onreset="resetForm()" onsubmit="save(); return false" >
         <div class="form-head">Employee Payroll Form</div>
         <div class="row-content">
           <label for="name" class="label text">Name</label>
@@ -95,7 +96,7 @@
                 type="radio"
                 id="male"
                 name="gender"
-                value="male"
+                value="Male"
                 required
               />
               <label for="male" class="text">Male</label>
@@ -105,7 +106,7 @@
                 type="radio"
                 id="female"
                 name="gender"
-                value="female"
+                value="Female"
                 required
               />
               <label for="female" class="text">Female</label>
