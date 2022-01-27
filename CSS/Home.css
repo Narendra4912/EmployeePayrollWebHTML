@@ -141,6 +141,7 @@ td img:first-child{
 
 td img{
     cursor: pointer;
+    padding-right: 5px;
 }
 
 .dept-label{
