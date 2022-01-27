@@ -46,13 +46,21 @@ const createEmployeeData = () => {
   employeePayrollData.gender = getSelectedValue("[name=gender]").pop();
   employeePayrollData.department = getSelectedValue("[name=department]");
   employeePayrollData.salary = getInputValueByID("#salary");
-  let date =
+  try{
+    let date =
     getInputValueByID("#day") +
     " " +
     getInputValueByID("#month") +
     " " +
     getInputValueByID("#year");
-  employeePayrollData.startDate = Date.parse(date);
+    employeePayrollData.startDate = new Date(Date.parse(date));
+  }
+  catch(e)
+  {
+    setTextValue('.date-error',e);
+    throw e;
+  }
+  
   employeePayrollData.notes = getInputValueByID("#notes");
 
   alert(employeePayrollData.name+" is added");

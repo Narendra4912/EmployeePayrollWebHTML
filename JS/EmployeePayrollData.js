@@ -42,12 +42,15 @@ class EmployeePayrollData {
   }
 
   set startDate(startDate) {
-    console.log("Date setter " + date);
+    console.log("Date setter " + startDate);
     const currentDate= new Date();
-    let diff=Math.abs(currentDate.getTime-startDate.getTime);
-    console.log(diff);
-    // console.log(diff);
-    // if(diff>(1000/60*60*24))
+    if(startDate > currentDate){
+      throw "Start date is a future date";
+    }
+    var diff=Math.abs(currentDate.getTime()- startDate.getTime());
+    if(diff/(1000*60*60*24)>30){
+      throw 'Start date is beyond 30 days';
+    }
     this._startDate = startDate;
   }
 

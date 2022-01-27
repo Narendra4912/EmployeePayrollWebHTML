@@ -68,7 +68,7 @@ const createEmployeePayrollJSON = () =>{
 const getDeptHtml = (deptList) =>{
     let deptHtml='';
     for(const dept of deptList){
-        deptHtml=`${deptHtml} <div class="dept-label">${dept}</div>`;
+        deptHtml=`${deptHtml} <div class='dept-label'>${dept}</div>`;
     }
     return deptHtml;
 }
