@@ -32,7 +32,7 @@ const save = () => {
     // console.log("in save");
     let employeePayrollData = createEmployeeData();
     createAndUpdateStorage(employeePayrollData);
-    window.location.href = "../HTML/Homepage.html";
+    window.location.replace(site_properties.homepage);
   } catch (e) {
     return;
   }
@@ -123,7 +123,7 @@ const setForm = () => {
   setValue("#salary", employeePayrollObject._salary);
   setTextValue(".salary-output", employeePayrollObject._salary);
   setValue("#notes", employeePayrollObject._notes);
-  let date = stringifyShowDate(employeePayrollObject._startDate).split(" ");
+  let date = stringifyDate(employeePayrollObject._startDate).split(" ");
   setValue("#day", date[0]);
   setValue("#month", date[1]);
   setValue("#year", date[2]);

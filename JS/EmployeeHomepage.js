@@ -30,14 +30,14 @@ const createInnerHtml = () => {
             <td>${employeePayrollData._gender}</td>
             <td>${employeePayrollData._department}</td>
             <td>${employeePayrollData._salary}</td>
-            <td>${stringifyShowDate(employeePayrollData._startDate)}</td>
+            <td>${stringifyDate(employeePayrollData._startDate)}</td>
             <td>
                 <img id="${
                     employeePayrollData._id
-                }" onclick="remove(${employeePayrollData._id})" src="../assets/icons/delete-black-18dp.svg" alt="delete">
+                }" onclick=remove(this) src="../assets/icons/delete-black-18dp.svg" alt="delete">
                 <img id="${
                     employeePayrollData._id
-                }" onclick="update(${employeePayrollData._id})" src="../assets/icons/create-black-18dp.svg" alt="update">
+                }" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="update">
             </td>
         </tr>
         `;
@@ -88,8 +88,9 @@ const stringifyShowDate = (date) => {
 };
 
 const remove = (data) => {
+  alert("hello");
   let removeEmployeeData = employeePayrollList.find(
-    (empData) => empData._id == data._id
+    (empData) => empData._id == data.id
   );
   if (!removeEmployeeData) return;
   const index = employeePayrollList
@@ -106,7 +107,7 @@ const remove = (data) => {
 
 const update = (data) => {
   let updateEmployeeData = employeePayrollList.find(
-    (empData) => empData._id == data._id
+    (empData) => empData._id == data.id
   );
   if (!updateEmployeeData) return;
   const index = employeePayrollList
@@ -114,5 +115,5 @@ const update = (data) => {
     .indexOf(updateEmployeeData._id);
   employeePayrollList.splice(index, 1);
   localStorage.setItem("editEmp", JSON.stringify(updateEmployeeData));
-  window.location.href = "../HTML/AddEmp.html";
+  window.location.replace(site_properties.addEmpPage);
 };
