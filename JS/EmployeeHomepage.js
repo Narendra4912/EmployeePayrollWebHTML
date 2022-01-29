@@ -17,7 +17,7 @@ const createInnerHtml = () => {
   const headerHtml =
     "<th></th><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th>" +
     "<th>Start Date</th><th>Actions</th>";
-  if (employeePayrollList.length == 0) return;
+  //if (employeePayrollList.length == 0) return;
   let innerHtml = `${headerHtml}`;
   for (const employeePayrollData of employeePayrollList) {
     console.log(employeePayrollData._id);
@@ -116,8 +116,8 @@ const update = (data) => {
     .indexOf(updateEmployeeData._id);
   employeePayrollList.splice(index, 1);
   localStorage.setItem("editEmp", JSON.stringify(updateEmployeeData));
-  console.log("********************");
-  console.log(data.id);
-  remove(data.id);
+  // console.log("********************");
+  // console.log(data.id);
+  // remove(data.id);
   window.location.replace(site_properties.addEmpPage);
 };
